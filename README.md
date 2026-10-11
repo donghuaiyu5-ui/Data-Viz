@@ -1,19 +1,20 @@
-# What Does MoMA Collect?
+What Does MoMA Collect?
 
-A student data visualization project comparing artwork counts across MoMA classifications. Built with HTML, CSS, JavaScript, and Chart.js 4.4.8, with a white layout inspired by the MoMA website, a GIF banner, hover tooltips, and a full classification table.
+In this project, I chose MoMA's collection data to display the number of works in different art categories through a horizontal bar chart. I want to see what types of works MoMA has collected besides paintings, and what are the differences in their quantity.
 
-## Run
-Open this folder in VS Code and use Live Server on index.html, or run `python3 -m http.server 8000` in this folder and visit http://localhost:8000. Chart.js loads from jsDelivr and requires internet access. Publish the folder contents to a GitHub repository and enable GitHub Pages from the main branch root.
+Project Function
+The webpage is created using HTML, CSS, JavaScript, and Chart.exe. The bar chart displays the top 15 categories in terms of quantity, while the remaining categories are merged into 'Other'. When the mouse moves over the column, you can see the number of works and their percentage in the total. At the bottom of the page, you can also expand to view data tables for all categories.
 
-## Data
-Original source: https://github.com/MuseumofModernArt/collection (CC0 metadata). The supplied Artworks.json has 160,700 records. JavaScript counts the Classification field, merges blank and `(not assigned)` values as Unknown, sorts counts, and charts the top 15 categories plus Other. All classifications remain in the table. These are dataset records, not currently displayed artworks. Original classification names are preserved, including archive categories. Dataset counts may differ from later MoMA releases.
+Data source
+Data from [MoMA Collection Data]（ https://github.com/MuseumofModernArt/collection ）The original file is' Artworks. json ', containing 160700 work records.
+Due to the large size of the original file, I created a simplified version of 'data/classifications. json', retaining only the 'Classification' field required for the charts, while keeping all work records. Records without classification or marked as' not assigned 'are uniformly classified as Unknown.
 
-## Resources and AI disclosure
-Chart.js documentation: https://www.chartjs.org/docs/latest/charts/bar.html. Chart.js distribution: https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js.
+Operation method
+Open the project folder in VS Code and use Live Server to open 'index. html'. The webpage loads Chart.exe through the internet, so it needs to be connected to the internet.
 
-OpenAI Codex helped brainstorm three chart ideas, draft design notes, and write the HTML, CSS, and JavaScript for data aggregation, chart configuration, tooltips, and responsive styling. Example prompts: “Compare the number of artworks in different MoMA classifications” and “Make the page look like an art exhibition poster, with an off-white background, a large heading, and a colorful horizontal bar chart.” Review and personalize this disclosure before submission if you make further changes.
-
-Visual design reference: https://www.moma.org/. The GIF banner (1.gif) was supplied by the student; add its original source and creator here before submission.
-
-## Smaller data file
-The website loads data/classifications.json, derived from the original Artworks.json. It retains all 160,700 records but only the Classification field used by the chart. No records were sampled or removed. The large original file is kept locally and excluded from Git.
+The resources and AI tools used
+-Data: [MoMA Collection Data]（ https://github.com/MuseumofModernArt/collection ）.
+-Chart tool: [Chart.js]（ https://www.chartjs.org/docs/latest/ ）.
+-Page design reference: [MoMA official website]（ https://www.moma.org/ ）The layout mainly refers to the white background, headline, and image area.
+-GIF source: Pinterest.
+-I used OpenAI Codex to help discuss charts and debugging, as well as adjust page styles and streamline data.
