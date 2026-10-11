@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Does MoMA Collect?</title><link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script defer src="script.js"></script>
+    </head>
+<body>
+    <div class="top-white-band"><div class="top-title-inner"><h1>What does <br>MoMA <em>collect?</em></h1>
+                <p class="description">Beyond the paintings we know.<br>An exploration of the artworks, archives, and objects in the Museum of Modern Art’s collection.</p></div></div>
+    <div class="hero-image">
+        <img src="1.gif" alt="" >
+    </div>
+    <main>
+            
+        <section class="stats" aria-label="Dataset summary">
+            <div>
+                <strong id="total">—</strong>
+                <span>artwork records</span>
+            </div>
+            <div>
+                <strong id="categories">—</strong>
+                <span>classifications</span>
+            </div>
+            <div>
+                <strong id="largest">—</strong>
+                <span>largest classification</span>
+            </div>
+        </section>
+        
+        <section class="visual">
+            <div class="chart-heading">
+                <h2>The collection, by category</h2>
+                <p>Hover over a bar to explore.</p>
+             </div>
+                 <p id="status" role="status">Loading the collection…</p>
+             <div class="chart-scroll">
+            <div id="chart-wrap">
+              <canvas id="collection-chart" aria-label="Number of artworks by classification" role="img"></canvas>
+            </div>
+            
+            </div>
+                <p class="note">Top 15 classifications shown individually; all remaining classifications are combined as Other. Colors distinguish rows, not additional groups.</p>
+        </section>
+        
+        <section class="takeaway">
+            <h2 id="insight">There is more to the collection than painting.</h2>
+            <p>These numbers count records in the downloaded dataset. They do not measure gallery space, artistic importance, or what is currently on display.</p>
+        </section>
+           <details>
+            <summary>View all classification counts</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Classification</th>
+                        <th>Records</th>
+                        <th>Share</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table"></tbody>
+            </table>
+           </details>
+           
+           <footer>
+            <p>Source: <a href="https://github.com/MuseumofModernArt/collection">MoMA Collection Data</a> · CC0 metadata</p>
+            <p>Independent student project. Missing and “not assigned” classifications are grouped as Unknown.</p>
+        </footer>
+    </main>
+</body>
+</html>
